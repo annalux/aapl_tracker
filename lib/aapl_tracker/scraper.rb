@@ -22,7 +22,6 @@ class AaplTracker::Scraper
         @metrics[:ex_dividend_date] = doc.css("td[class='Ta(end) Fw(600) Lh(14px)']")[14].text
         @metrics[:oneyear_target_est] = doc.css("span[class='Trsdu(0.3s) ']")[10].text
         @metrics
-        # @metrics.each {|k, v| print k, ": ", v, "\n"}
     end 
 
 
