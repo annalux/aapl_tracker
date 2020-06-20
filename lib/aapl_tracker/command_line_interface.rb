@@ -66,6 +66,8 @@ class AaplTracker::CLI
             puts "Forward Dividend & Yield:".colorize(:magenta) + " #{@tickerdata.forward_dividend_and_yield}" 
             puts "Ex-Dividend Date:".colorize(:magenta) + " #{@tickerdata.ex_dividend_date}" 
             puts "1Y Target Est:".colorize(:magenta) + " #{@tickerdata.oneyear_target_est}" 
+        elsif response > 17 || response < 1 
+            puts "Nice number! But your choice must be between 1-17.".colorize(:red)
         end 
     end 
 
@@ -82,5 +84,4 @@ class AaplTracker::CLI
             exit 
         end 
     end 
-
 end 
