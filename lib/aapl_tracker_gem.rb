@@ -10,5 +10,8 @@ require 'colorize'
 
 module AaplTracker
   class Error < StandardError; end
-  # Your code goes here...
+  metrics_check = AaplTracker::CLI.new 
+  metrics_check.scrape 
+  metrics_check.get_metric
+  metrics_check.continue
 end
